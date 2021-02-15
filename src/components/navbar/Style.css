@@ -1,0 +1,12 @@
+.text-center {
+  position: absolute;
+  left: 50%;
+  transform: translatex(-50%);
+  color: aliceblue;
+
+}
+.navbar {
+  background-color: #101c3d;
+  height: 160px;
+  border-bottom: 8px solid rgb(199, 23, 61);
+}
