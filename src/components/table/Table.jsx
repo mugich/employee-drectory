@@ -21,7 +21,7 @@ class Table extends Component {
   }
 
   searchEmployee = (filter) => {
-    console.log("Search", filter);
+  
     const filteredData = this.state.result.filter((employee) => {
       var values = Object.values(employee).join("").toLowerCase();
       return values.indexOf(filter.toLowerCase()) !== -1;
@@ -34,7 +34,7 @@ class Table extends Component {
     this.setState({
       [e.target.name]: e.target.value,
     });
-    console.log("Handle ", this.state.search);
+   
   };
 
   handleFormSubmit = (e) => {
@@ -45,11 +45,14 @@ class Table extends Component {
   render() {
     return (
       <div className="container">
+       <div className="row">
         <Search
           value={this.state.search}
           handleInputChange={this.handleInputChange}
           handleFormSubmit={this.handleFormSubmit}
         />
+        </div>
+   
 
         <table className="table">
           <thead>
