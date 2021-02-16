@@ -1,9 +1,8 @@
-import React from 'react';
-
+import React from "react";
 const Search = (props) => {
   return (
-    <form>
-      <div className="form-group" style={{ display: 'flex' }}>
+    <form className="justify-content-center">
+      <div className="form-group " style={{ display: "flex" }}>
         <label htmlFor="search"></label>
         <input
           onChange={props.handleInputChange}
@@ -14,16 +13,17 @@ const Search = (props) => {
           placeholder="Search Employee"
           id="search"
         />
-        <button onClick={props.handleFormSubmit} className="btn btn-primary">
+        <button
+          onClick={props.handleFormSubmit}
+          className="btn btn-primary ml-1"
+        >
           Search
         </button>
         <button onClick={props.refreshPage} className="btn btn-primary ml-1">
           Reset
         </button>
-       
       </div>
     </form>
-
   );
-}
+};
 export default Search;

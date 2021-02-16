@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import TableRow from "../tableRow/TableRow";
 import API from "../utils/API";
 import Search from "../search/Search";
+import "./Style.css";
 
 class Table extends Component {
   state = {
@@ -21,7 +22,6 @@ class Table extends Component {
   }
 
   searchEmployee = (filter) => {
-  
     const filteredData = this.state.result.filter((employee) => {
       var values = Object.values(employee).join("").toLowerCase();
       return values.indexOf(filter.toLowerCase()) !== -1;
@@ -34,7 +34,6 @@ class Table extends Component {
     this.setState({
       [e.target.name]: e.target.value,
     });
-   
   };
 
   handleFormSubmit = (e) => {
@@ -45,14 +44,15 @@ class Table extends Component {
   render() {
     return (
       <div className="container">
-       <div className="row">
-        <Search
-          value={this.state.search}
-          handleInputChange={this.handleInputChange}
-          handleFormSubmit={this.handleFormSubmit}
-        />
+        <div className="row justify-content-center">
+          <div className="col-4 search">
+            <Search
+              value={this.state.search}
+              handleInputChange={this.handleInputChange}
+              handleFormSubmit={this.handleFormSubmit}
+            />
+          </div>
         </div>
-   
 
         <table className="table">
           <thead>
