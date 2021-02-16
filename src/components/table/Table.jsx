@@ -54,11 +54,13 @@ class Table extends Component {
           </div>
         </div>
 
-        <table className="table">
+        <table className="table table-striped">
           <thead>
             <tr>
               <th scope="col">Image</th>
-              <th scope="col">Name</th>
+              <th scope="col">Name  
+                   
+              </th>
               <th scope="col">Phone</th>
               <th scope="col">Email</th>
               <th scope="col">DOB</th>
@@ -66,8 +68,8 @@ class Table extends Component {
           </thead>
           <tbody>
             {this.state.result.map((user) => (
-              <TableRow
-                image={user.picture.thumbnail}
+              <TableRow            
+                image={user.picture.thumbnail}          
                 name={user.name.first}
                 phone={user.phone}
                 email={user.email}
