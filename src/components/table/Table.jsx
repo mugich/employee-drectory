@@ -67,14 +67,14 @@ class Table extends Component {
             </tr>
           </thead>
           <tbody>
-            {this.state.result.map((user) => (
+            {this.state.result.map((user ,index) => (
               <TableRow            
                 image={user.picture.thumbnail}          
                 name={user.name.first}
                 phone={user.phone}
                 email={user.email}
                 dob={user.dob.date}
-                key={user.key}
+                key={index}
               />
             ))}
           </tbody>
